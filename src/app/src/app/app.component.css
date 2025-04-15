@@ -1,0 +1,248 @@
+/************** GLOBAL **************/
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Snell Roundhand', cursive;
+    color: #ff69b4;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ff1493;
+    font-size: 0.7cm;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d147a3;
+}
+
+/************** NAV-BAR **************/
+nav {
+    overflow: hidden;
+    background-color: #f6e1ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header li {
+    float: right;
+    font-size: 1.2em;
+}
+
+header li a {
+    text-decoration: none;
+    text-align: center;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-family: 'Snell Roundhand', cursive;
+    color: #ff1493;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ffb6c1, #ff69b4);
+    box-shadow: 2px 2px 10px rgba(255, 105, 180, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+nav.nav-menu ul li.btn:hover a {
+    color: #fff;
+    background: #ff1493;
+    box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.8);
+}
+
+img {
+    height: 80px;
+    width: 120px;
+    border-radius: 15px;
+}
+
+/************** FOOTER **************/
+footer {
+    background-color: #f6e1ff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 0.7cm;
+    font-family: 'Snell Roundhand', cursive;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/************** CONTAINER PRINCIPAL **************/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 120px 20px 20px; /* Moins d'espace pour éviter l'effet écrasé */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 15px; /* Ajout d'un espace entre les sections */
+}
+
+/************** STYLE DES SECTIONS **************/
+.screen {
+    flex: 1;
+    background: linear-gradient(135deg, #f8c1ff, #ffd3e0);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0.95;
+    min-height: 400px;
+}
+
+/************** TITRES **************/
+.screen h1 {
+    font-family: "Snell Roundhand", cursive;
+    font-size: 1.8em;
+    color: #d63384;
+    text-shadow: 2px 2px 4px rgba(214, 51, 132, 0.3);
+}
+
+/************** CHAMPS DE SAISIE **************/
+textarea, 
+input[type="text"], 
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff9fcb;
+    border-radius: 15px;
+    font-size: 1em;
+    font-family: "Textura", serif;
+    background: #fff0f6;
+    color: #d63384;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+textarea:focus, 
+input[type="text"]:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.4);
+}
+
+/************** LISTES (NOTES & TAGS) **************/
+.note-list, .tag-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.note-list li, .tag-list li {
+    background: #fff0f6;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: "Textura", serif;
+    color: #d63384;
+    text-align: left;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/************** BOUTONS **************/
+button {
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: "Snell Roundhand", cursive;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #d63384;
+    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+}
+
+/* Bouton supprimer des tags */
+.tag-list button {
+    background: #ff3366;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.tag-list button:hover {
+    background: #c4003d;
+}
+
+/************** RESPONSIVE DESIGN **************/
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Passe en mode colonne sur tablette */
+        align-items: center;
+        padding: 100px 10px;
+    }
+
+    .screen {
+        width: 90%; /* Prend toute la largeur */
+    }
+
+    nav {
+        flex-direction: column; /* Réorganise la nav en colonne si besoin */
+    }
+
+    header li {
+        float: none;
+        text-align: center;
+    }
+
+    header li a {
+        display: block;
+        margin: 5px auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 80px 10px;
+    }
+
+    .screen {
+        width: 95%;
+        min-height: auto;
+    }
+
+    footer {
+        font-size: 0.6cm;
+        padding: 5px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

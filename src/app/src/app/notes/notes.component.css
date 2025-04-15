@@ -1,0 +1,98 @@
+/************** CONTAINER PRINCIPAL **************/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 120px 20px 20px; /* Moins d'espace pour éviter l'effet écrasé */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 15px; /* Ajout d'un espace entre les sections */
+}
+
+/************** STYLE DES SECTIONS **************/
+.screen {
+    flex: 1;
+    background: linear-gradient(135deg, #f8c1ff, #ffd3e0);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0.95;
+    min-height: 400px;
+}
+
+/************** TITRES **************/
+.screen h1 {
+    font-family: "Snell Roundhand", cursive;
+    font-size: 1.8em;
+    color: #d63384;
+    text-shadow: 2px 2px 4px rgba(214, 51, 132, 0.3);
+}
+
+/************** CHAMPS DE SAISIE **************/
+textarea, 
+input[type="text"], 
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff9fcb;
+    border-radius: 15px;
+    font-size: 1em;
+    font-family: "Textura", serif;
+    background: #fff0f6;
+    color: #d63384;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+textarea:focus, 
+input[type="text"]:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.4);
+}
+
+/************** LISTES (NOTES & TAGS) **************/
+.note-list{
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.note-list li {
+    background: #fff0f6;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: "Textura", serif;
+    color: #d63384;
+    text-align: left;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/************** BOUTONS **************/
+button {
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: "Snell Roundhand", cursive;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #d63384;
+    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+}

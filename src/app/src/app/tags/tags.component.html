@@ -1,0 +1,43 @@
+<section id="edit-tags" class="screen">
+    <h1>Gérer les Tags</h1>
+
+    <!-- Lien ou bouton pour ajouter un nouveau tag -->
+<button type="button" (click)="startEditingNewTag()">Ajouter un tag</button>
+
+<!-- Formulaire d'édition de tag -->
+@if(editing){
+  <div>
+    <label for="name">Nom du tag :</label>
+    <input class="input" [(ngModel)]="editing.name" name="name" required />
+  </div>
+  
+  <div>
+    <label for="color">Couleur du tag :</label>
+    <input class="input" [(ngModel)]="editing.color" name="color" type="color" required />
+  </div>
+
+  <div>
+    <!-- Bouton pour ajouter ou modifier le tag -->
+    <button type="button" (click)="dialogAddTag()">
+      {{ editing.id === 0 ? 'Ajouter' : 'Modifier' }}
+    </button>
+    <button type="button" (click)="cancelEdit()">Annuler</button>
+  </div>
+
+}
+    
+  <ul class="tag-list">
+    @for(tag of tags; track $index) {
+      <div (dblclick)="editTag(tag)">
+        <app-tag [id]="tag.id" [name]="tag.name" [color]="tag.color"></app-tag>
+        <button (click)="dialogDeleteTag(tag)">Supprimer</button>
+      </div>
+    } @empty {
+      <li>Aucun tag !</li>
+    }
+  </ul>
+</section>
+
+
+
+
